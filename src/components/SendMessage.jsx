@@ -36,12 +36,13 @@ const SendMessage = () => {
         style={{ backgroundColor: '#4c745d', borderRadius: '10px' }}
         onSubmit={(event) => sendMessage(event)}
       >
-        <HStack>
+        <HStack padding={'0'} m={0}>
           <Input
+            m={0}
             name="message"
             type="text"
             focusBorderColor="#5ee2c5"
-            border={'2px solid '}
+            border={'2px solid white'}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             placeholder="Type a message..."
