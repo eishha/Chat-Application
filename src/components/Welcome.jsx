@@ -7,11 +7,12 @@ const Welcome = ({ SignIn }) => {
       justifyContent={'center'}
       alignItems={'center'}
       spacing={4}
+      background={'#0d131f'}
     >
       <Heading color="purple.500">Welcome to Chat Room</Heading>
       <HStack spacing={4}>
         {' '}
-        <Text>Sign in to start chatting</Text>
+        <Text color={'gray'}>Sign in to start chatting</Text>
         <Button colorScheme="yellow" onClick={SignIn}>
           Sign In
         </Button>

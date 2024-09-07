@@ -1,15 +1,15 @@
-import { Button, Heading, HStack } from '@chakra-ui/react'
+import { Button, Heading, HStack, Stack } from '@chakra-ui/react'
 // import { useState } from 'react'
 
 const Navbar = ({ SignIn, SignOut, user }) => {
   return (
     <HStack
-      margin={'4'}
       justifyContent="space-between"
       alignItems={'center'}
       p={6}
+      backgroundColor={'#0d131f'}
     >
-      <Heading>Chat Room</Heading>
+      <Heading color={'white'}>Chat Room</Heading>
       {user ? (
         <Button onClick={SignOut}>Sign Out</Button>
       ) : (
@@ -20,7 +20,7 @@ const Navbar = ({ SignIn, SignOut, user }) => {
 }
 const SignInopt = ({ SignIn }) => {
   return (
-    <HStack>
+    <Stack flexDir={['column', 'row']}>
       <Button colorScheme="purple" onClick={SignIn}>
         Sign In
       </Button>
@@ -28,7 +28,7 @@ const SignInopt = ({ SignIn }) => {
       <Button colorScheme="yellow" variant={'ghost'} onClick={SignIn}>
         Sign Up
       </Button>
-    </HStack>
+    </Stack>
   )
 }
 export default Navbar

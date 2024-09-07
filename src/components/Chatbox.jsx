@@ -36,7 +36,7 @@ const ChatBox = () => {
   }, [])
 
   return (
-    <Box>
+    <Box backgroundColor={'#0d131f'}>
       <Box p={6} mb={'60px'}>
         {messages?.map((message) => (
           <Message key={message.id} message={message} />
